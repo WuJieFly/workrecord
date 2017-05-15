@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>勒索病毒更新补丁</title>
+
+
+    <script >
+        function disdown(val) {
+            var index = val.selectedIndex;
+            var text = val.options[index].text;
+            var value = val.options[index].value;
+            var div = document.getElementById('download');
+            var a = document.getElementById('downclick');
+            if (text == '====请选择====') {
+                div.style.display = 'none';
+                alert("请选择要下载的版本")
+                return false;
+            }
+          
+            a.href = "./" + value + ".rar";
+            a.innerHTML = "点击下载" + text+"补丁";
+            div.style.display = 'block';
+        }
+  
+    </script>
+</head>
+    
+<body>
+    <h1>
+        针对勒索病毒，请根据系统版本选择补丁进行更新
+    </h1>
+
+    <select onchange="disdown(this)" >
+        <option value ="default" title="====请选择====">====请选择====</option>
+        <option value="win7x64" title="windows 7 64位" >
+            windows 7 64位
+        </option>
+        <option value="win7x86" title="windows 7 32位">windows 7 32位</option>
+
+        <option value="winxp" title="windows xp 系统">windows xp 系统</option>
+    </select>
+    <div id="download" style ="display:none">
+        <a  href ="#" id ="downclick"  ></a>
+
+    </div>
+</body>
+</html>

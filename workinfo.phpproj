@@ -19,6 +19,7 @@
     <Compile Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="index.html" />
     <Content Include="NASBACKUP.html" />
     <Content Include="NASBACKUP.txt" />
   </ItemGroup>
