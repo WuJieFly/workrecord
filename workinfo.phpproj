@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>workinfo</Name>
+    <ProjectGuid>{3e1dd694-3d87-40b4-a3de-222bf34e7780}</ProjectGuid>
+    <RootNamespace>workinfo</RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include=".gitattributes" />
+    <Compile Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NASBACKUP.html" />
+    <Content Include="NASBACKUP.txt" />
+  </ItemGroup>
+</Project>
